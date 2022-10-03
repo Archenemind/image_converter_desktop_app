@@ -2,6 +2,7 @@ import os
 from PIL import Image
 import pillow_avif
 
+print("Writte the name of the file to convert :) ")
 path = input()
 
 for filename in os.listdir(path):
