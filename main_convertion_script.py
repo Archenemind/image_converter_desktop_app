@@ -38,9 +38,9 @@ for filename in os.listdir(path):
     if i >= 12:                                       
         img = Image.open(f"{path}/{filename}")
         change_width = Image.open(f"{path}/{filename}")
-    
+  
         clean_name = os.path.splitext(filename)[0]
-        
+      
         img.save(f'{path_out_webp}/{clean_name}.webp')
         img.save(f'{path_out_png}/{clean_name}.png')
         img.save(f'{path_out_avif}/{clean_name}.AVIF')
@@ -55,10 +55,10 @@ for filename in os.listdir(path):
 i=0
 for filename in os.listdir(path):
     i += 1
-    if i >= 12: 
+    if i >= 12:
         img = Image.open(f"{path}/{filename}")
         img.thumbnail((1280, 1280))
-        
+       
         clean_name = os.path.splitext(filename)[0]
         img.save(f'{path1280}/{clean_name}.jpg')
         img.save(f'{path_out_webp1280}/{clean_name}.webp')
