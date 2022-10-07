@@ -58,7 +58,7 @@ for filename in os.listdir(path):
     if i >= 12:
         img = Image.open(f"{path}/{filename}")
         img.thumbnail((1280, 1280))
-       
+     
         clean_name = os.path.splitext(filename)[0]
         img.save(f'{path1280}/{clean_name}.jpg')
         img.save(f'{path_out_webp1280}/{clean_name}.webp')
