@@ -37,7 +37,7 @@ for filename in os.listdir(path):
     i += 1
     if i >= 12:                                       
         img = Image.open(f"{path}/{filename}")
-        change_width = Image.open(f"{path}/{filename}")
+        change_width640 = Image.open(f"{path}/{filename}")
   
         clean_name = os.path.splitext(filename)[0]
       
@@ -45,22 +45,19 @@ for filename in os.listdir(path):
         img.save(f'{path_out_png}/{clean_name}.png')
         img.save(f'{path_out_avif}/{clean_name}.AVIF')
 
-        change_width.thumbnail((640, 640))
+        change_width640.thumbnail((640, 640))
 
-        change_width.save(f'{path640}/{clean_name}.jpg')
-        change_width.save(f'{path_out_webp640}/{clean_name}.webp')
-        change_width.save(f'{path_out_png640}/{clean_name}.png')
-        change_width.save(f'{path_out_avif640}/{clean_name}.AVIF')
+        change_width640.save(f'{path640}/{clean_name}.jpg')
+        change_width640.save(f'{path_out_webp640}/{clean_name}.webp')
+        change_width640.save(f'{path_out_png640}/{clean_name}.png')
+        change_width640.save(f'{path_out_avif640}/{clean_name}.AVIF')
 
-i=0
-for filename in os.listdir(path):
-    i += 1
-    if i >= 12:
-        img = Image.open(f"{path}/{filename}")
-        img.thumbnail((1280, 1280))
+        change_width1280 = Image.open(f"{path}/{filename}")
+        change_width1280.thumbnail((1280, 1280))
      
-        clean_name = os.path.splitext(filename)[0]
-        img.save(f'{path1280}/{clean_name}.jpg')
-        img.save(f'{path_out_webp1280}/{clean_name}.webp')
-        img.save(f'{path_out_png1280}/{clean_name}.png')
-        img.save(f'{path_out_avif1280}/{clean_name}.AVIF')
+        change_width1280.save(f'{path1280}/{clean_name}.jpg')
+        change_width1280.save(f'{path_out_webp1280}/{clean_name}.webp')
+        change_width1280.save(f'{path_out_png1280}/{clean_name}.png')
+        change_width1280.save(f'{path_out_avif1280}/{clean_name}.AVIF')
+
+
