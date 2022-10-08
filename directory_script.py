@@ -39,10 +39,12 @@ def directory_script(path):
     for filename in os.listdir(path):
         if not filename.lower().endswith(('.jpg','.png','webp','AVIF')):
             j+=1
-        
+            
+   
     for filename in os.listdir(path): 
         if  z < j:
             z += 1
+            print (j, z)
         elif  j == z:
             try:                           
                 clean_name = os.path.splitext(filename)[0]
@@ -66,3 +68,4 @@ def directory_script(path):
                 change_width1280.save(f'{path_out_avif1280}/{clean_name}.AVIF')
             except:
                 j+=1
+                z+=1
