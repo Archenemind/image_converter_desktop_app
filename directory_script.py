@@ -34,6 +34,7 @@ def directory_script(path):
     check_existence_of_convertion_folders(path, path_out_webp640)
     
     for filename in os.listdir(path):
+<<<<<<< HEAD
     
         try:                          
             clean_name = os.path.splitext(filename)[0]
@@ -41,6 +42,23 @@ def directory_script(path):
             img.save(f'{path_out_webp}/{clean_name}.webp')
             img.save(f'{path_out_png}/{clean_name}.png')
             img.save(f'{path_out_avif}/{clean_name}.AVIF')
+=======
+        if not filename.lower().endswith(('.jpg','.png','webp','AVIF')):
+            j+=1
+            
+   
+    for filename in os.listdir(path): 
+        if  z < j:
+            z += 1
+            
+        elif  j == z:
+            try:                           
+                clean_name = os.path.splitext(filename)[0]
+                img = Image.open(f"{path}/{filename}")
+                img.save(f'{path_out_webp}/{clean_name}.webp')
+                img.save(f'{path_out_png}/{clean_name}.png')
+                img.save(f'{path_out_avif}/{clean_name}.AVIF')
+>>>>>>> 7397b6c1f951ce9ed5852ef68e5b1ffb91abafdc
 
             change_width640 = Image.open(f"{path}/{filename}")
             change_width640.thumbnail((640, 640))
