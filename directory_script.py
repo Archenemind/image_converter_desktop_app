@@ -43,7 +43,7 @@ def directory_script(path):
             img.save(f'{path_out_avif}/{clean_name}.AVIF')
 
             change_width640 = Image.open(f"{path}/{filename}")
-            
+            change_width640.thumbnail((640, 640))
             change_width640.save(f'{path_out_webp640}/{clean_name}.webp')
             change_width640.save(f'{path_out_png640}/{clean_name}.png')
             change_width640.save(f'{path_out_avif640}/{clean_name}.AVIF')
@@ -51,7 +51,6 @@ def directory_script(path):
             if change_width640.mode in ("RGBA", "P"): 
                 change_width640 = change_width640.convert("RGB")
             
-            change_width640.thumbnail((640, 640))
             change_width640.save(f'{path640}/{clean_name}.jpg')
             
             change_width1280 = Image.open(f"{path}/{filename}")
@@ -67,4 +66,3 @@ def directory_script(path):
             
         except:
             continue
-            
