@@ -33,9 +33,9 @@ def directory_script(path):
     check_existence_of_convertion_folders(path, path_out_webp1280)
     check_existence_of_convertion_folders(path, path_out_webp640)
     
-    for filename in os.listdir(path): 
-   
-        try:                           
+    for filename in os.listdir(path):
+    
+        try:                          
             clean_name = os.path.splitext(filename)[0]
             img = Image.open(f"{path}/{filename}")
             img.save(f'{path_out_webp}/{clean_name}.webp')
