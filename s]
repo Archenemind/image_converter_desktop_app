@@ -1,0 +1,152 @@
+[33mcommit 7397b6c1f951ce9ed5852ef68e5b1ffb91abafdc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Jan 23 21:31:05 2023 -0500
+
+    small fixes
+
+[33mcommit f7de6d0914778207c22aa23ad8b8090888776c69[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Jan 23 21:30:26 2023 -0500
+
+    remove the loop
+
+[33mcommit f955073f8a0395cdb41a4e5eb887495a84aa3416[m
+Merge: e96042b dd9a4f1
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Jan 23 21:28:53 2023 -0500
+
+    Merge branch 'main' of https://github.com/TheCpro/ImageConverterJCedition
+
+[33mcommit e96042b5ade738c7d79c316007a411b35c8818e2[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Jan 23 21:28:44 2023 -0500
+
+    .
+
+[33mcommit dd9a4f11c8fbd6d8c6803f2b2eede4a431c8a978[m
+Merge: 80d60a9 e4a515d
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Jan 23 21:20:49 2023 -0500
+
+    Merge branch 'main' of https://github.com/TheCpro/ImageConverterJCedition
+
+[33mcommit 80d60a9b829fadc430dc0b5b822019ec5d213c76[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Jan 23 21:18:27 2023 -0500
+
+    a
+
+[33mcommit f12f6fd16a95783f65b0fc05cee68b6b0a3f9a18[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Jan 23 21:17:44 2023 -0500
+
+    YEP
+
+[33mcommit e4a515dfc12dbffec9e92901d9472a2678898fa4[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Dec 26 12:00:55 2022 -0500
+
+    added loop
+
+[33mcommit 7f39c4c944f42ed69b564a64a04867d79d46c83b[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Dec 26 11:50:59 2022 -0500
+
+    minor changes
+
+[33mcommit 514fcc07137817eaefc14bacc5d0b44a986acc27[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Tue Dec 20 09:18:15 2022 -0500
+
+    meaningless modifications
+
+[33mcommit ab15457134c1b51bc72b0f5edee45b649e273d20[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Fri Oct 7 22:44:54 2022 -0400
+
+    Exception handling fix
+
+[33mcommit 69edf356d941801e015b9b543f397b905a7037a3[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Fri Oct 7 21:19:05 2022 -0400
+
+    added exception handling in for loop directory_script for .db files not to pop exceptions
+
+[33mcommit 81224e653df653944aa2235b5e84cd472fe245f7[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Fri Oct 7 21:08:58 2022 -0400
+
+    Now it will detect if a file is not an image and thus it will not be tried to manipulate it, except for .db files in which it will throw an exception
+
+[33mcommit 1a702332467c21668d1d99ae778b10411a826a43[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Fri Oct 7 21:06:09 2022 -0400
+
+    created the directory_script.py for more clean main.py and organization
+
+[33mcommit 35004d15b71d7b4631343d5e225456a1752de197[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Fri Oct 7 21:04:22 2022 -0400
+
+    change the main_convertion_file into main.py
+
+[33mcommit 76a955df51ddfc191c842080af2311401456944a[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Fri Oct 7 18:59:01 2022 -0400
+
+    Put the 1280 width into the same for loop
+
+[33mcommit d616f1593a180b9b218fa3248a53b70fb49d98ee[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Fri Oct 7 18:23:47 2022 -0400
+
+    Added the main_convertion_script.exe of the current version
+
+[33mcommit 67dd55891b0939086caf905c7ca7b68480fe908c[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Oct 3 20:02:13 2022 -0400
+
+    Indexation fix
+
+[33mcommit 7f2a288eae56a2b5b6a8e9a40cb4c1872d98f04a[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Oct 3 20:00:43 2022 -0400
+
+    Added the convertion folders.py ,that creates the convertion folders, and checks if they don't already exist. Also added a counter for the folders created in the convertion carpet to avoid exceptions.
+
+[33mcommit 6caa89dbd8c0ad552c8e3cfe8ec8bbea880dbcb9[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Oct 3 15:00:15 2022 -0400
+
+    Removed the print function and added a user instruction in input
+
+[33mcommit 4263bafb0fa374c4a6507014c6dfc42bbe529a75[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Oct 3 14:40:56 2022 -0400
+
+    Added the print function
+
+[33mcommit 409366e2371b326e9b3c91f927bb85461015a34e[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Oct 3 14:35:12 2022 -0400
+
+    Added the input for the file name, the convertions will save in the same
+    file
+
+[33mcommit 8a49ed82ed0ac85bb0c4563d410b825085d5d121[m
+Author: Carlos Garcia <qesloqpongo@gmail.com>
+Date:   Mon Oct 3 14:09:47 2022 -0400
+
+    Converts using the name of an existing file in the directory of the script, not ready for input yet
+
+[33mcommit ef5343da58679c160620c33febb5a22e533f94e5[m
+Author: Carlos Garcia <110995721+TheCpro@users.noreply.github.com>
+Date:   Mon Oct 3 13:53:00 2022 -0400
+
+    Create README.md
+
+[33mcommit 2e919fd11ccf92186bba23f7e96dafc428ed8ad6[m
+Author: Carlos Garcia <110995721+TheCpro@users.noreply.github.com>
+Date:   Mon Oct 3 13:52:39 2022 -0400
+
+    Add files via upload

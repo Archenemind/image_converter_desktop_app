@@ -34,38 +34,35 @@ def directory_script(path):
     check_existence_of_convertion_folders(path, path_out_webp1280)
     check_existence_of_convertion_folders(path, path_out_webp640)
     
-    j = 0 
-    z = 0
-    for filename in os.listdir(path):
-        if not filename.lower().endswith(('.jpg','.png','webp','AVIF')):
-            j+=1
+    # j = 0 
+    # z = 0
+    # for filename in os.listdir(path):
+    #     if not filename.lower().endswith(('.jpg','.png','webp','AVIF')):
+    #         j+=1
             
    
     for filename in os.listdir(path): 
-        if  z < j:
-            z += 1
-            print (j, z)
-        elif  j == z:
-            try:                           
-                clean_name = os.path.splitext(filename)[0]
-                img = Image.open(f"{path}/{filename}")
-                img.save(f'{path_out_webp}/{clean_name}.webp')
-                img.save(f'{path_out_png}/{clean_name}.png')
-                img.save(f'{path_out_avif}/{clean_name}.AVIF')
+   
+        try:                           
+            clean_name = os.path.splitext(filename)[0]
+            img = Image.open(f"{path}/{filename}")
+            img.save(f'{path_out_webp}/{clean_name}.webp')
+            img.save(f'{path_out_png}/{clean_name}.png')
+            img.save(f'{path_out_avif}/{clean_name}.AVIF')
 
-                change_width640 = Image.open(f"{path}/{filename}")
-                change_width640.thumbnail((640, 640))
-                change_width640.save(f'{path640}/{clean_name}.jpg')
-                change_width640.save(f'{path_out_webp640}/{clean_name}.webp')
-                change_width640.save(f'{path_out_png640}/{clean_name}.png')
-                change_width640.save(f'{path_out_avif640}/{clean_name}.AVIF')
+            change_width640 = Image.open(f"{path}/{filename}")
+            change_width640.thumbnail((640, 640))
+            change_width640.save(f'{path640}/{clean_name}.jpg')
+            change_width640.save(f'{path_out_webp640}/{clean_name}.webp')
+            change_width640.save(f'{path_out_png640}/{clean_name}.png')
+            change_width640.save(f'{path_out_avif640}/{clean_name}.AVIF')
 
-                change_width1280 = Image.open(f"{path}/{filename}")
-                change_width1280.thumbnail((1280, 1280))
-                change_width1280.save(f'{path1280}/{clean_name}.jpg')
-                change_width1280.save(f'{path_out_webp1280}/{clean_name}.webp')
-                change_width1280.save(f'{path_out_png1280}/{clean_name}.png')
-                change_width1280.save(f'{path_out_avif1280}/{clean_name}.AVIF')
-            except:
-                j+=1
-                z+=1
+            change_width1280 = Image.open(f"{path}/{filename}")
+            change_width1280.thumbnail((1280, 1280))
+            change_width1280.save(f'{path1280}/{clean_name}.jpg')
+            change_width1280.save(f'{path_out_webp1280}/{clean_name}.webp')
+            change_width1280.save(f'{path_out_png1280}/{clean_name}.png')
+            change_width1280.save(f'{path_out_avif1280}/{clean_name}.AVIF')
+        except:
+            continue
+            
