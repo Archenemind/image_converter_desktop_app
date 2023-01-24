@@ -2,10 +2,7 @@ import os
 import pillow_avif
 from PIL import Image
 from create_convertion_folders import check_existence_of_convertion_folders
-<<<<<<< HEAD
 from manage_exception_RGBA import manage_exception_for_RGBA
-=======
->>>>>>> 65a8049b9edb8963f99122cbf5dd80bf5a12f272
 
 def directory_script(path):
        
@@ -37,38 +34,14 @@ def directory_script(path):
     check_existence_of_convertion_folders(path, path_out_webp1280)
     check_existence_of_convertion_folders(path, path_out_webp640)
     
-<<<<<<< HEAD
     for filename in os.listdir(path): 
-   
-        try:                           
-=======
-    for filename in os.listdir(path):
-<<<<<<< HEAD
-    
+        
         try:                          
->>>>>>> 65a8049b9edb8963f99122cbf5dd80bf5a12f272
             clean_name = os.path.splitext(filename)[0]
             img = Image.open(f"{path}/{filename}")
             img.save(f'{path_out_webp}/{clean_name}.webp')
             img.save(f'{path_out_png}/{clean_name}.png')
             img.save(f'{path_out_avif}/{clean_name}.AVIF')
-=======
-        if not filename.lower().endswith(('.jpg','.png','webp','AVIF')):
-            j+=1
-            
-   
-    for filename in os.listdir(path): 
-        if  z < j:
-            z += 1
-            
-        elif  j == z:
-            try:                           
-                clean_name = os.path.splitext(filename)[0]
-                img = Image.open(f"{path}/{filename}")
-                img.save(f'{path_out_webp}/{clean_name}.webp')
-                img.save(f'{path_out_png}/{clean_name}.png')
-                img.save(f'{path_out_avif}/{clean_name}.AVIF')
->>>>>>> 7397b6c1f951ce9ed5852ef68e5b1ffb91abafdc
 
             change_width640 = Image.open(f"{path}/{filename}")
             change_width640.thumbnail((640, 640))
