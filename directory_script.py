@@ -2,7 +2,7 @@ import os
 import pillow_avif
 from PIL import Image
 from create_convertion_folders import check_existence_of_convertion_folders
-
+from manage_exception_RGBA import manage_exception_for_RGBA
 
 def directory_script(path):
        
@@ -34,13 +34,6 @@ def directory_script(path):
     check_existence_of_convertion_folders(path, path_out_webp1280)
     check_existence_of_convertion_folders(path, path_out_webp640)
     
-    # j = 0 
-    # z = 0
-    # for filename in os.listdir(path):
-    #     if not filename.lower().endswith(('.jpg','.png','webp','AVIF')):
-    #         j+=1
-            
-   
     for filename in os.listdir(path): 
    
         try:                           
