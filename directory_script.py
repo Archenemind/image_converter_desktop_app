@@ -2,7 +2,6 @@ import os
 import pillow_avif
 from PIL import Image
 from create_convertion_folders import check_existence_of_convertion_folders
-from manage_exception_RGBA import manage_exception_for_RGBA
 
 def directory_script(path):
        
