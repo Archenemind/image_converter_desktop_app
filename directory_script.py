@@ -44,7 +44,7 @@ def directory_script(path):
     for filename in os.listdir(path): 
         if  z < j:
             z += 1
-            print (j, z)
+            
         elif  j == z:
             try:                           
                 clean_name = os.path.splitext(filename)[0]
