@@ -1,2 +1,4 @@
 Pillow
 pillow-avif-plugin
+pyqt5
+pyqt5-tools

@@ -8,3 +8,4 @@ def check_existence_of_convertion_folders(path, convertion_path):
     
         if not it_exists:
             os.makedirs(convertion_path)
+            
