@@ -1,7 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from directory_script import directory_script
 import sys
-# import _pickle
+from Folder import Folder
 
 
 class Ui_Import_data():
@@ -11,7 +10,10 @@ class Ui_Import_data():
 
         if data_path != '':
 
-            directory_script(data_path)
+            folder = Folder(data_path)
+            folder.create_folders()
+            folder.create_images()
+            del folder
 
     def setupUi(self, Import_data):
         Import_data.setWindowIcon(QtGui.QIcon('flagofCuba_6551.png'))
