@@ -1,6 +1,6 @@
 import os
 import pillow_avif  # This module is used but pylint doesn't recognize it
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 from create_convertion_folders import check_convertion_folders
 
 
@@ -76,4 +76,6 @@ class Folder():
                 change_width1280.save(f'{self.path1280}/{clean_name}.jpg')
 
             except PermissionError:
+                continue
+            except UnidentifiedImageError:
                 continue
