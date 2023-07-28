@@ -4,10 +4,13 @@ from PIL import Image, UnidentifiedImageError
 from create_convertion_folders import check_convertion_folders
 
 
-class Folder():
-    def __init__(self, path) -> None:
-        self.path = path
+class FilesPath():
+    """Class to handle the images, mainly using the paths"""
 
+    def __init__(self, path) -> None:
+        self.path = path  # The Path in which the images that you want to convert are
+
+        # Output paths for the converted images
         self.out_path_webp = f'{path}/converted_imgs_webp'
         self.out_path_png = f'{path}/converted_imgs_png'
         self.out_path_avif = f'{path}/converted_imgs_avif'
@@ -23,6 +26,8 @@ class Folder():
         self.out_path_avif_1280 = f'{path}/converted_imgs_avif_1280'
 
     def create_folders(self) -> None:
+        """Creates the  convertion folders
+        """
         check_convertion_folders(self.path, self.out_path_avif)
         check_convertion_folders(self.path, self.out_path_avif_1280)
         check_convertion_folders(self.path, self.out_path_avif_640)
@@ -37,7 +42,9 @@ class Folder():
         check_convertion_folders(self.path, self.out_path_webp_1280)
         check_convertion_folders(self.path, self.out_path_webp_640)
 
-    def create_images(self):
+    def create_images(self) -> None:
+        """Loops throught the files in the folder and converts then 
+        to all formats and saves them in their corresponding convertion folder"""
         for filename in os.listdir(self.path):
 
             try:
