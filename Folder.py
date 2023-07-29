@@ -1,7 +1,7 @@
 import os
 import pillow_avif  # This module is used but pylint doesn't recognize it
 from PIL import Image, UnidentifiedImageError
-from create_convertion_folders import check_convertion_folders
+from create_convertion_folders import check_convertion_folders, delete_all_convertion_folders
 
 
 class FilesPath():
@@ -9,7 +9,7 @@ class FilesPath():
 
     def __init__(self, path) -> None:
         self.path = path  # The Path in which the images that you want to convert are
-
+        self.check_if_images_exist = False
         # Output paths for the converted images
         self.out_path_webp = f'{path}/converted_imgs_webp'
         self.out_path_png = f'{path}/converted_imgs_png'
@@ -82,7 +82,12 @@ class FilesPath():
 
                 change_width1280.save(f'{self.path1280}/{clean_name}.jpg')
 
+                self.check_if_images_exist = True
+
             except PermissionError:
                 continue
+
             except UnidentifiedImageError:
                 continue
+        if not self.check_if_images_exist:
+            delete_all_convertion_folders(self.path)
