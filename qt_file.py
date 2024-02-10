@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Folder import FilesPath
+from folder import FilesPath
 
 
 class Ui_Import_data():
@@ -19,7 +19,7 @@ class Ui_Import_data():
 
     def setupUi(self, Import_data):
         """Window function"""
-        Import_data.setWindowIcon(QtGui.QIcon('flagofCuba_6551.png'))
+        Import_data.setWindowIcon(QtGui.QIcon('images/flagofCuba_6551.png'))
         Import_data.setStyleSheet('''background-color: grey;''')
 
         Import_data.setObjectName("Import_data")
@@ -28,7 +28,7 @@ class Ui_Import_data():
         self.pushButton.setGeometry(QtCore.QRect(0, 0, 640, 640))
 
         self.pushButton.setStyleSheet(
-            '''border-image: url("upload-1118929_1280.webp");''')
+            '''border-image: url("images/upload-1118929_1280.webp");''')
 
         self.retranslateUi(Import_data)
 
